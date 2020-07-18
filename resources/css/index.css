@@ -1,14 +1,21 @@
 body {
   font-family: sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  align-content: flex-start;
+  min-width: 800px;
 }
 
+/* Navigation Bar */
 .shadow {
   box-shadow: 0px 5px 10px -5px black;
+}
+
+.text-shadow {
+  text-shadow: 3px -3px 10px #363636;
 }
 
 header {
@@ -18,7 +25,7 @@ header {
   align-items: stretch;
   align-content: space-around;
 
-  background-color: #b51e1b;
+  background-color: #8f1925;
   background-size: 200px;
 
   font-weight: normal;
@@ -31,8 +38,12 @@ header {
 
   height: 50px;
 
-  min-width: 600px; 
+  min-width: 600px;
   width: 100%;
+
+  position: sticky;
+  top:0;
+  z-index: 1;
 }
 
 div.title {
@@ -47,6 +58,34 @@ div.title {
 
 }
 
+nav {
+  display: flex;
+  justify-content: flex-end;
+
+  width: 100%;
+
+  align-items: stretch;
+  align-content: space-around;
+
+  margin-right: 50px;
+}
+
+span {
+  margin-left: 10px;
+
+  padding-top:15px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  color: white;
+}
+
+span:hover {
+  color: #8f1925;
+  background-color: white;
+}
+
+/* Cards */
 div.card {
 
   display: flex;
@@ -73,53 +112,68 @@ div.card {
 
 }
 
-.card-rightside {
-  opacity: 0.9;
-  width: 500px;
-  background-color: #363636;
+.card-rightpanel {
+  opacity: 0.8;
+  width: 300px;
+  background-color: #321914;
   color: white;
+  padding: 50px;
+
+  text-align: justify;
+  text-justify: inter-word;
 }
 
-.card-leftside {
+.card-leftpanel {
   color: white;
-  width: 75% ;
+  width: 65% ;
 }
 
-h1.card-leftside-title{
+.card-caption {
+  color: white;
+  background-color:#321914;
+  opacity: 0.7;
+  text-align: center;
+  padding: 5px;
+}
+
+#card1-title{
   margin-top: 50px;
-  margin-left: 20px;
+  margin-left: 50px;
   font-size: 60px;
-    text-shadow: 3px -3px 10px #363636;
 }
 
-#card1 {
-    padding: 50px;
+#card2 {
+  background-image: url("overlook.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
-nav {
-  display: flex;
+#card2-title{
+  font-size: 50px;
+}
+
+#card2-leftpanel {
+  width:300px;
+  padding: 50px;
+  background-color: #321914;
+  opacity: .9;
+  align-content: center;
+}
+
+#card2-rightpanel {
+  background-color: #321914;
+  opacity: 1;
+
+}
+
+#card3 {
+  background-image: url("lake.jpg");
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
   justify-content: flex-end;
-
-  width: 100%;
-
-  align-items: stretch;
-  align-content: space-around;
-
-  margin-right: 50px;
 }
 
-span {
-  margin-left: 10px;
-
-  padding-top:15px;
-  padding-left: 10px;
-  padding-right: 10px;
-
-  color: white;
-}
-
-span:hover {
-  color: #b51e1b;
-  background-color: white;
-  padding-bottom: 50px;
-}
+/* orange: #eb6422
+red: #8f1925*/
